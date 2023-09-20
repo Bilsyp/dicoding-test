@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Coffee Cafe - Your destination for the finest coffee blends and delicious pastries. Explore our menu, learn about us, and get in touch with us today.">
+    <title>Coffee Cafe</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /><script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="shortcut icon" href="/image/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+       
+        <nav>
+            <div class="brand">
+                <img width="80" height="80" src="./image/logo.png" alt=""> <span>Coffee</span>
+               </div>
+             
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+      <div class="box observed" id="observed">
+        <h1>Welcome to <span> Coffee </span> Cafe</h1>
+        <div class="btn-group">
+          <button>More Info</button>
+          <button>Order Now</button>
+        </div>
+      </div>
+    </header>
+    <section>
+      <main>
+        <article class="observed">
+          <h2>Our Special Coffee Blend</h2>
+          <p>
+            At Coffee Cafe, we take pride in our unique coffee blends sourced
+            from the finest beans around the world. Whether you prefer a rich
+            espresso or a creamy latte, we have something to satisfy every
+            coffee lover's palate.
+          </p>
+        </article>
+
+        <article class="observed">
+          <h2>Our Delicious Pastries</h2>
+          <p>
+            Pair your coffee with our delectable pastries made fresh every
+            morning. From croissants to muffins, our pastries are the perfect
+            complement to your coffee experience.
+          </p>
+        </article>
+      </main>
+
+      <aside class="observed">
+        <h3>Today's <span> Specials </span></h3>
+        <ul >
+          <li>
+            <p>Specialty Espresso - <span> $4.99</span></p>
+          </li>
+          <li>Caramel Macchiato - <span> $5.49</span></li>
+          <li>Blueberry Muffin - <span> $2.99</span></li>
+          <li>Chocolate Croissant - <span> $3.49 </span></li>
+          <li></li>
+        </ul>
+        <div class="image">
+          <img src="/image/logo.png" alt="" />
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 Coffee Cafe. All rights reserved.</p>
+    </footer>
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      });
+      const observedElements = document.querySelectorAll(".observed");
+      observedElements.forEach((el) => observer.observe(el));
+    </script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

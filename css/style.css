@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  outline: none;
+  border: none;
+  list-style: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* Elemen yang awalnya tidak terlihat */
+.observed {
+  opacity: 0;
+}
+.show {
+  opacity: 1;
+
+  transition: all 2s ease-in;
+
+  /* Efek transisi opasitas selama 0.5 detik */
+}
+
+header {
+  height: 100vh;
+  padding: 10px;
+  position: relative;
+  background: url("../image/coffee.jpg") center center/cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+nav ul{
+    position: absolute;
+    top: 110%;
+    background-color: aliceblue;
+    z-index: 20;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    padding: 10px;
+}
+.box {
+  position: relative;
+  z-index: 10;
+  color: white;
+}
+.box h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.box span {
+  color: rgb(255, 191, 0);
+}
+.box p {
+  font-style: italic;
+  font-weight: 300;
+}
+.box .btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.box button {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.98rem;
+  border-radius: 5px;
+  color: white;
+  transition: all 500ms;
+}
+.box button:first-child {
+  border: 2px solid rgb(0, 102, 255);
+  color: aliceblue;
+  background-color: transparent;
+}
+.box button:last-child {
+  border: 2px solid rgb(255, 191, 0);
+  background-color: transparent;
+}
+.box button:first-child:hover {
+  background-color: rgb(0, 102, 255);
+}
+
+.box button:last-child:hover {
+  background-color: rgb(255, 191, 0);
+}
+section {
+  padding: 15px;
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-direction: column;
+}
+section article {
+  text-align: center;
+  margin: 28px 0;
+}
+article h2 {
+  padding: 20px 0;
+  font-weight: 500;
+}
+
+aside {
+  text-align: center;
+  background-color: rgb(0, 102, 255);
+  padding: 20px;
+  color: aliceblue;
+  width: 80%;
+
+  border-radius: 5px;
+}
+aside ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: left;
+  gap: 10px;
+}
+aside h3 {
+  padding: 15px 0;
+}
+aside span {
+  color: rgb(255, 191, 0);
+  font-weight: bold;
+}
+.image img {
+  width: 200px;
+}
+
+footer {
+  width: 100%;
+  background-color: rgba(255, 191, 0, 0.77);
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+@media screen and (min-width: 760px) {
+  section {
+    flex-direction: row;
+    gap: 80px;
+  }
+  section article {
+    text-align: left;
+    max-width: 550px;
+  }
+  aside {
+    width: auto;
+  }
+  .image img {
+    width: 100px;
+    height: 100px;
+  }
+}
